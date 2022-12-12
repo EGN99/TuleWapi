@@ -1,0 +1,56 @@
+body{
+    margin:45px;
+}
+
+#Us{
+    text-align: center;
+    padding-top: 65px;
+    text-rendering: geometricPrecision;
+    color: coral;
+    font-family: monospace;
+    font-size:2cm;
+}
+
+.searchForm{
+    display: block;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top:8.7cm;
+}
+
+#searchArea{
+    min-height:20cm
+}
+.searchForm input{
+    height:45px;
+    width:20cm;
+    border-radius: 25px;
+}
+#searchBtn{
+    margin-left:25px;
+    border-radius: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+
+.nav-item{
+    padding:5px
+}
+ 
+input[type="text"] {
+    
+    
+  
+    font-size: 18px;
+    color: inherit;
+    border: 1px solid transparent;
+    
+  }
+  
+  input[type="text"]::placeholder {
+    color: #bbb;
+    text-align: center;
+  }
+  
