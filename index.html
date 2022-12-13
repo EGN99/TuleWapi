@@ -9,7 +9,7 @@
     </head>
 
     <body>
-        <section>
+        <section id="landingArea">
             <div class="header">
                 <h1 id="Us">TuleWapi™</h1>
            </div> 
@@ -52,11 +52,43 @@
                   </li>
                   
                 </ul>
-                <button id= "signInBtn" class="btn btn-dark">Sign In <i class="fa-solid fa-circle-user"></i></button>
+                <button id= "signInBtn" class="btn btn-dark" onclick="document.getElementById('loginPrompt').style.display='block'" style="width:auto;">Sign In <i class="fa-solid fa-circle-user"></i></button>
+                
+  
+
               </div>
             </div>
           </nav>
         </section>
+
+        <div id="loginPrompt" class="modal">
+  
+          <form class="modal-content animate" action="/action_page.php" method="post">
+            <div class="imgcontainer">
+              <span onclick="document.getElementById('loginPrompt').style.display='none'" class="close" title="Close Modal">&times;</span>
+              <img src="/images/login-avatar.png" alt="Avatar" class="avatar">
+            </div>
+        
+            <div class="container">
+              <label for="uname"><b>Username</b></label>
+              <input type="text" placeholder="Enter Username" name="uname" required>
+        
+              <label for="psw"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="psw" required>
+                
+              <button id="submitBtn" type="submit">Login</button>
+              <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+              </label>
+            </div>
+        
+            <div class="container" style="background-color:#f1f1f1">
+              <button type="button" onclick="document.getElementById('loginPrompt').style.display='none'" class="cancelbtn">Cancel</button>
+              <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+          </form>
+
+        </div>
 
 
         <div id="searchArea" style="background-image:url('/images/rest3.jpg');">
@@ -92,7 +124,12 @@
                   <br>
 
                 </div>
-              </div>
+            </div>
+
+
+            <div class="footer">
+            <p>Footer</p>
+            </div>
 
         </footer>
 
