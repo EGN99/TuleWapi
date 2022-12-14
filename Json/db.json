@@ -1,0 +1,104 @@
+{
+    "retaurants": [
+{
+    "id": 1,
+    "category": "BBQ-Restaraunt",
+    "name": "Jikoni",
+    "image": ".images/rest1.jpg",
+    "Description": "Perfect for a cold night."
+  },
+
+  {
+    "id": 2,
+    "name": "The FrenchMan's Coffer",
+    "category": "Cocktail-Bar",
+    "image": ".images/rest1.jpg",
+    "Description": "Perfect for a cold night."
+  },
+
+  {
+    "id": 3,
+    "name": "Chen's",
+    "category": "Chinese-Restaraunt",
+    "image": ".images/rest1.jpg",
+    "Description": "Perfect for a cold night."
+  },
+
+  {
+    "id": 4,
+    "name": "AfroMlo",
+    "category": "Fusion-Restaraunt",
+    "image": ".images/rest1.jpg",
+    "Description": "Perfect for a cold night."
+  },
+  
+  {
+    "id": 5,
+    "name": "Bakuli",
+    "category": "Soup-Bar",
+    "image": ".images/rest1.jpg",
+    "Description": "Perfect for a cold night."
+  }
+
+],
+
+"users":[
+{
+    "id":1,
+    "name": "Njoro",
+    "password": "123456"
+}
+
+],
+
+"cuisine-categories":[
+    {
+        "id":1,
+        "cuisine":"Arabian Food",
+        "hotels": "Hotel 1"
+    },
+
+    {
+        "id":2,
+        "cuisine":"Caribbean Food",
+        "hotels": "Hotel 2"
+    },
+
+    {
+        "id":3,
+        "cuisine":"Chinese Food",
+        "hotels": "Hotel 3"
+    },
+
+    {
+        "id":4,
+        "cuisine":"Ethiopian Food",
+        "hotels": "Hotel 4"
+    },
+
+    {
+        "id":5,
+        "cuisine":"Indian Food",
+        "hotels": "Hotel 5"
+    },  
+
+    {
+        "id":6,
+        "cuisine":"Italian Food",
+        "hotels": "Hotel 6"
+    },
+
+    {
+        "id":7,
+        "cuisine":"Mexican Food",
+        "hotels": "Hotel 7"
+    },
+
+    {
+        "id":8,
+        "cuisine":"Swahili Food",
+        "hotels": "Hotel 8"
+    }
+
+    ]
+}
