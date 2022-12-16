@@ -1,106 +1,146 @@
 {
-    "restaurants": [
-{
-    "id": 1,
-    "category": "BBQ-Restaraunt",
-    "name": "Jikoni",
-    "image": "/images/Emara.jpg",
-    "description": "The Best BBQ Steak In Town!",
-    "cuisine":""
-},
-
-  {
-    "id": 2,
-    "name": "The FrenchMan's Coffer",
-    "category": "Cocktail-Bar",
-    "image": "/images/rest1.jpg",
-    "description": "Let Us Get You Drunk!"
-  },
-
-  {
-    "id": 3,
-    "name": "Chen's",
-    "category": "Chinese Food",
-    "image": "/images/rest1.jpg",
-    "description": "So Good!"
-  },
-
-  {
-    "id": 4,
-    "name": "Trattoria Pecorrino",
-    "category": "Italian Cuisine",
-    "image": "/images/rest1.jpg",
-    "description": "Tastes of Italy"
-  },
-
-  {
-    "id": 5,
-    "name": "Bakuli",
-    "category": "Soup-Bar",
-    "image": "/images/rest1.jpg",
-    "description": "Just Like Mom's Soup"
-  }
-
-],
-
-
-    "users":[
-{
-    "id":1,
-    "name": "Njoro",
-    "password": "123456"
-}
-
-],
-
-"cuisine-categories":[
+        "users":[
     {
         "id":1,
-        "cuisine":"Arabian Food",
-        "hotels": "Hotel 1"
-    },
-
-    {
-        "id":2,
-        "cuisine":"Caribbean Food",
-        "hotels": "Hotel 2"
-    },
-
-    {
-        "id":3,
-        "cuisine":"Chinese Food",
-        "hotels": "Hotel 3"
-    },
-
-    {
-        "id":4,
-        "cuisine":"Ethiopian Food",
-        "hotels": "Hotel 4"
-    },
-
-    {
-        "id":5,
-        "cuisine":"Indian Food",
-        "hotels": "Hotel 5"
-    },  
-
-    {
-        "id":6,
-        "cuisine":"Italian Food",
-        "hotels": "Hotel 6"
-    },
-
-    {
-        "id":7,
-        "cuisine":"Mexican Food",
-        "hotels": "Hotel 7"
-    },
-
-    {
-        "id":8,
-        "cuisine":"Swahili Food",
-        "hotels": "Hotel 8"
+        "name": "Njoro",
+        "password": "123456"
     }
 
+],
+
+        "cuisine-categories":[
+    {
+   
+        "Arabian-Food":[
+            {
+               
+                "id":1,
+                "name":"Al-Yusra"
+                    
+            }
+            ],
+        "Ethiopian-Food":[
+            {
+                   
+                "id":2,
+                "name":"Al-Yusra"
+                        
+            }
+            ],
+        "Indian-Food":[
+            {
+                       
+                "id":3,
+                "name":"Al-Yusra"
+                            
+            }
+            ],
+        "Italian-Food":[
+            {
+                           
+                "id":4,
+                "name":"Al-Yusra"
+                                
+            }
+            ],
+        "Arabian Food":[
+            {
+                               
+                "id":5,
+                "name":"Al-Yusra"
+                                    
+            }
+            ]
+        }
+    ],
+
+            "categories":[
+
+        {
+            "BBQ-Restaraunts" :[
+                {
+            "id":1,
+            "name": "Jikoni",
+            "image": "/images/Emara.jpg",
+            "description": "The Best BBQ Steak In Town!"
+          },
+          {
+            "id":2,
+            "name": "Choma",
+            "image": "/images/Emara.jpg",
+            "description": "The Best BBQ Steak In Town!"
+          },
+          {
+            "id":3,
+            "name": "Kamakis",
+            "image": "/images/Emara.jpg",
+            "description": "The Best BBQ Steak In Town!"
+          }
+          ]
+        },
+
+        {
+            "Cocktail-Bars" :[
+                {
+            "id":1,
+            "name": "The FrenchMan's Coffer",
+            "image": "/images/Emara.jpg",
+            "description": "Let Us Get You Drunk!!"
+          },
+          {
+            "id":2,
+            "name": "The Drunk Monkey",
+            "image": "/images/Emara.jpg",
+            "description": "Perfect for your after work drink."
+          },
+          {
+            "id":3,
+            "name": "Mwendas's",
+            "image": "/images/Emara.jpg",
+            "description": "Njoo tulewe"
+          }
+          ]
+        },
+
+
+        {
+            "Chinese-Food" :[
+                {
+            "id":1,
+            "name": "Chen's",
+            "image": "/images/rest1.jpg",
+            "description": "So Good!"
+          },
+          {
+            "id":2,
+            "name": "China Ndogo",
+            "image": "/images/Emara.jpg",
+            "description": "The Best BBQ Steak In Town!"
+          }
+          ]
+        },
+
+
+        {
+            "Italian Cuisine" :[
+                {
+            "id":1,
+            "name": "Trattoria Pecorrino",
+            "image": "/images/Emara.jpg",
+            "description": "Tastes of Italy"
+          }
+          ]
+        },
+
+        {
+            "Soup-Bar" :[
+                {
+            "id":2,
+            "name": "Bakuli",
+            "image": "/images/Emara.jpg",
+            "description": "Just Like Mom's Soup"
+          }
+          ]
+        }
     ]
 }
