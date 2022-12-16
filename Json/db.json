@@ -1,7 +1,8 @@
 {
+        
         "users":[
     {
-        "id":1,
+        "id":0,
         "name": "Njoro",
         "password": "123456"
     }
@@ -10,43 +11,52 @@
 
         "cuisine-categories":[
     {
-   
+        "id":0,
         "Arabian-Food":[
             {
                
-                "id":1,
+                "id":0,
                 "name":"Al-Yusra"
                     
             }
-            ],
+            ]},
+
+    {
+        "id":1,
         "Ethiopian-Food":[
             {
                    
-                "id":2,
+                "id":0,
                 "name":"Al-Yusra"
                         
             }
-            ],
+            ]},
+    {
+        "id":2,
         "Indian-Food":[
             {
                        
-                "id":3,
+                "id":0,
                 "name":"Al-Yusra"
                             
             }
-            ],
+            ]},
+            {
+        "id":3,
         "Italian-Food":[
             {
                            
-                "id":4,
+                "id":0,
                 "name":"Al-Yusra"
                                 
             }
-            ],
-        "Arabian Food":[
+            ]},
+    {
+        "id":4,
+        "Mexican-Food":[
             {
                                
-                "id":5,
+                "id":0,
                 "name":"Al-Yusra"
                                     
             }
@@ -56,7 +66,7 @@
 
             "categories":[
 
-        {
+        {   "id":0,
             "BBQ-Restaraunts" :[
                 {
             "id":1,
@@ -80,6 +90,7 @@
         },
 
         {
+            "id":1,
             "Cocktail-Bars" :[
                 {
             "id":1,
@@ -103,7 +114,8 @@
         },
 
 
-        {
+        {   
+            "id":2,
             "Chinese-Food" :[
                 {
             "id":1,
@@ -122,6 +134,7 @@
 
 
         {
+            "id":3,
             "Italian Cuisine" :[
                 {
             "id":1,
@@ -133,6 +146,7 @@
         },
 
         {
+            "id":4,
             "Soup-Bar" :[
                 {
             "id":2,
