@@ -24,10 +24,12 @@
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active" aria-current="page" href="#Us">Home</a>
                   </li>
                   
-
+          <!--  To implement later
+            
+            
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       Cuisines
@@ -40,20 +42,20 @@
                       <li><a class="dropdown-item" href="#">Indian Food</a></li>
                       <li><a class="dropdown-item" href="#">Italian Food</a></li>
                       <li><a class="dropdown-item" href="#">Mexican Food</a></li>
-                      <li><a class="dropdown-item" href="#">Swahili Food</a></li>
-                      
+                      <li><a class="dropdown-item" href="#">Swahili Food</a></li>    
                     </ul>
+                  </li>-->      
+
+                  <li class="nav-item">
+                    <a id="favs" class="nav-link">My Favorites <i class="fa-solid fa-heart"></i></a>
                   </li>
                   <li class="nav-item">
-                    <a id="favs" href="#"class="nav-link">My Favorites <i class="fa-solid fa-heart"></i></a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Review <i class="fa-solid fa-comment"></i></a>
+                    <a id="review" class="nav-link" >Review <i class="fa-solid fa-comment"></i></a>
                   </li>
                   
                 </ul>
                 <button id= "signInBtn" class="btn btn-dark" onclick="document.getElementById('loginPrompt').style.display='block'" style="width:auto;">Sign In <i class="fa-solid fa-circle-user"></i></button>
-                
+                <p id="welcomeMsg"></p>
   
 
               </div>
@@ -76,7 +78,7 @@
               <label for="psw"><b>Password</b></label>
               <input id="password" type="password" placeholder="Enter Password" name="psw" required>
                 
-              <button id="loginBtn" type="submit">Login</button>
+              <button id="submitBtn" type="submit">Login</button>
               <label>
                 <input type="checkbox" checked="checked" name="remember"> Remember me
               </label>
@@ -93,48 +95,42 @@
 
         <div id="searchArea" style="background-image:url('/images/rest3.jpg');">
             <form class="searchForm">
-            <input  type="text" placeholder="Find Your Favorite Restaurants" aria-label="Search">
+            <input id="searchBar"  type="text" placeholder="Find Your Favorite Restaurants" >
             <button id="searchBtn" class ="btn btn-warning">Let's Go!</button>
+            <ul class ='list-group' id="result">
+              <li></li>
+            </ul>
           </form>
         </div>
             
 
-        <footer>
+
             <div class="card text-center">
                
                 <div class="card-body">
                   <h4 class="card-title">Popular Restaurants</h4>
                   <p class="card-text">Find Popular Restaurants Near You </p>
-                 
-                  <a href="#" >BBQ Restaurants</a> 
-                  <br>
-                  <a href="#" >Chinese Restaurants</a>
-                  <br>
-                  <a href="#" >Cocktail Bars</a>
-                  <br>
-                  <a href="#" >Fusion Restaurants</a> 
-                  <br>
-                  <a href="#" >Pizza Places</a>
-                  <br>
-                  <a href="#" >Soup Bars</a>
-                  <br>
-                  <a href="#" >Sushi Bars</a>
-                  <br>
-                  <a href="#" >Thai Restaurants</a>
-                  <br>
-
+                 <br>
+                 <div">
+                  <button id="BBQ" type="button" class="btn btn-outline-warning" class="restLinks" >BBQ Restaurants</button>
+                  <button type="button" class="btn btn-outline-warning" class="restLinks" >Chinese Restaurants</button>
+                  <button type="button" class="btn btn-outline-warning" class="restLinks" >Cocktail Bars</button>
+                  <button type="button" class="btn btn-outline-warning" class="restLinks"  >Pizza Places</button>
+                  <button type="button" class="btn btn-outline-warning" class="restLinks" >Soup Bars</button>
+                  <button type="button" class="btn btn-outline-warning" class="restLinks" >Sushi Bars</button>
+                 </div>
                 </div>
             </div>
 
+          <div id="insertHotel" class="modal modal-content animate"></div>
 
-            <div class="footer">
-            <p>Footer</p>
-            </div>
-
-        </footer>
+          <div class="footer"></div>
 
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
         <script src="https://kit.fontawesome.com/bd157914d0.js" crossorigin="anonymous"></script>
-    </body>
+        <script src="src/index.js" ></script>
+      </body>
 </html>
+
+

@@ -1,11 +1,11 @@
 {
-    "retaurants": [
+    "restaurants": [
 {
     "id": 1,
     "category": "BBQ-Restaraunt",
     "name": "Jikoni",
-    "image": ".images/rest1.jpg",
-    "Description": "Perfect for a cold night."
+    "image": "",
+    "description": "The Best BBQ Steak In Town!"
   },
 
   {
@@ -13,34 +13,35 @@
     "name": "The FrenchMan's Coffer",
     "category": "Cocktail-Bar",
     "image": ".images/rest1.jpg",
-    "Description": "Perfect for a cold night."
+    "description": "Let Us Get You Drunk!"
   },
 
   {
     "id": 3,
     "name": "Chen's",
-    "category": "Chinese-Restaraunt",
+    "category": "Chinese Food",
     "image": ".images/rest1.jpg",
-    "Description": "Perfect for a cold night."
+    "description": "So Good!"
   },
 
   {
     "id": 4,
-    "name": "AfroMlo",
-    "category": "Fusion-Restaraunt",
+    "name": "Trattoria Pecorrino",
+    "category": "Italian Cuisine",
     "image": ".images/rest1.jpg",
-    "Description": "Perfect for a cold night."
+    "description": "Tastes of Italy"
   },
-  
+
   {
     "id": 5,
     "name": "Bakuli",
     "category": "Soup-Bar",
     "image": ".images/rest1.jpg",
-    "Description": "Perfect for a cold night."
+    "description": "Just Like Mom's Soup"
   }
 
 ],
+
 
 "users":[
 {
@@ -48,6 +49,7 @@
     "name": "Njoro",
     "password": "123456"
 }
+
 
 ],
 

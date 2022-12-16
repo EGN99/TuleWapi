@@ -9,6 +9,7 @@ body{
     color: coral;
     font-family: monospace;
     font-size:2cm;
+    cursor: pointer;
 }
 
 .searchForm{
@@ -39,6 +40,11 @@ body{
     padding:5px
 }
  
+#welcomeMsg{
+  padding-right: 15px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
 #loginPrompt{
     margin-top: 6.07cm;
     width:35%;
@@ -158,11 +164,22 @@ input[type=text], input[type=password] {
   }
 
   .footer {
-    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: coral;
-    color: white;
+    color: black;
     text-align: center;
     }  
+  
+#review{
+  cursor: pointer;
+}
+
+#favs{
+  cursor: pointer;
+}
+
+#insertHotel{
+  padding: 10px;
+  margin-right: 22cm;
+}
