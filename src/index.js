@@ -1,16 +1,16 @@
 function fetchUsers(){
     fetch (" http://localhost:3000/users") 
     .then((resp) =>resp.json())
-    .then(getInfo)
+    .then(getInfo);
     }
 
 function getInfo(users){
 
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
-    const signIn =document.getElementById('signInBtn')
-    const loginForm = document.getElementById('loginPrompt')
-    const welcome = document.getElementById('welcomeMsg')
+    const signIn =document.getElementById('signInBtn');
+    const loginForm = document.getElementById('loginPrompt');
+    const welcome = document.getElementById('welcomeMsg');
    
 
     for (i=0; i<users.length; i++) {
@@ -40,7 +40,8 @@ function fetchRestaurants(){
 
 function searchRestaurants(restaurants){
     const searchItem = document.getElementById('searchBar').value;
-    const searchResults= document.getElementById('result')
+    const searchResults= document.getElementById('result');
+
     for (i=0; i<restaurants.length; i++) {
         if(searchItem==restaurants[i].name){
 
@@ -54,8 +55,8 @@ function searchRestaurants(restaurants){
 
             return;
         }
-    } hotelName.innerText = ("Not Found") 
-    }
+    } alert("Not Found") 
+    };
 
 
 const searchBtn = document.getElementById('searchBtn')
@@ -66,7 +67,7 @@ searchBtn.addEventListener('click',(event)=>{
 
 
 
-function fetchRestaurants(){
+function fetchBBQ(){
     fetch (" http://localhost:3000/restaurants/1") 
     .then((resp) =>resp.json())
     .then(getHotel)
@@ -75,17 +76,23 @@ function fetchRestaurants(){
 
 function getHotel(restaurants){
     const hotelSct = document.getElementById('insertHotel');
-    //let hotelPic = document.createElement('img');
+    let hotelPic = document.createElement('img');
     let hotelDescription = document.createElement('p');
     let hotelCategory = document.createElement('p');
     let hotelName = document.createElement('h1');
 
-    //hotelPic.src = restaurants.image
+    hotelName.setAttribute("class","hotelName");
+    hotelPic.setAttribute("class","hotelPic");
+    hotelDescription.setAttribute("class","hotelDescription");
+    hotelCategory.setAttribute("class","hotelCategory");
+
+
+    hotelPic.src = restaurants.image
     hotelName.innerText = restaurants.name;
     hotelCategory.innerText = restaurants.category;
     hotelDescription.innerText = restaurants.description;
     
-    //hotelSct.appendChild(hotelPic);
+    hotelSct.appendChild(hotelPic);
     hotelSct.appendChild(hotelName);
     hotelSct.appendChild(hotelDescription);
     hotelSct.appendChild(hotelCategory);
@@ -94,10 +101,40 @@ function getHotel(restaurants){
     
 const bbqBtn = document.getElementById('BBQ');
 bbqBtn.addEventListener('click',()=>{
-    fetchRestaurants();
-    return;
-}
-);
+    fetchBBQ();
+});
 
+// function fetchDrinks(){
+//     fetch (" http://localhost:3000/restaurants/2") 
+//     .then((resp) =>resp.json())
+//     .then(getHotel)
+//     }
+// const drinksBtn = document.getElementById('drinks');
+//     bbqBtn.addEventListener('click',()=>{
+//         fetchDrinks();
+//     });
+
+document.addEventListener('DOMContentLoaded',()=>{
+
+    const footerInfo = document.getElementById('closer')
+
+    const Us = document.createElement('h3')
+    Us.setAttribute('id','ourName')
+    Us.innerText=('Tulewapi')
+
+    const about = document.createElement('p')
+    about.setAttribute('id','abt')
+    about.innerText = ('Helping You Find Culinary Perfection')
+
+    const contactBtn = document.createElement('button')
+    contactBtn.setAttribute('class','btn btn-warning')
+    contactBtn.innerText=(`Contact Us`)
+ 
+
+    footerInfo.appendChild(Us)
+    footerInfo.appendChild(about)
+    footerInfo.appendChild(contactBtn)
+
+})
 
 

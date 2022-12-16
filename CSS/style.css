@@ -57,6 +57,8 @@ body{
   input[type="text"]::placeholder {
     color: #bbb;
     text-align: center;
+    font-weight: bolder;
+    font-size: larger;
   }
   
   /* Full-width input fields */
@@ -181,5 +183,30 @@ input[type=text], input[type=password] {
 
 #insertHotel{
   padding: 10px;
-  margin-right: 22cm;
+
+}
+
+.hotelPic{
+  width :320px;
+  height :200px;
+}
+
+#closer{
+  background-color: coral;
+  padding-bottom: 25px;
+}
+
+#ourName{
+  font-family: monospace;
+  padding-top: 25px;
+  font-weight: bolder;
+  cursor: pointer;
+}
+#contactBtn{
+  font-family: 'Courier New', Courier, monospace;
+}
+
+#about{
+  font-family: 'Courier New', Courier, monospace;
+  cursor: pointer;
 }

@@ -4,15 +4,16 @@
     "id": 1,
     "category": "BBQ-Restaraunt",
     "name": "Jikoni",
-    "image": "",
-    "description": "The Best BBQ Steak In Town!"
-  },
+    "image": "/images/Emara.jpg",
+    "description": "The Best BBQ Steak In Town!",
+    "cuisine":""
+},
 
   {
     "id": 2,
     "name": "The FrenchMan's Coffer",
     "category": "Cocktail-Bar",
-    "image": ".images/rest1.jpg",
+    "image": "/images/rest1.jpg",
     "description": "Let Us Get You Drunk!"
   },
 
@@ -20,7 +21,7 @@
     "id": 3,
     "name": "Chen's",
     "category": "Chinese Food",
-    "image": ".images/rest1.jpg",
+    "image": "/images/rest1.jpg",
     "description": "So Good!"
   },
 
@@ -28,7 +29,7 @@
     "id": 4,
     "name": "Trattoria Pecorrino",
     "category": "Italian Cuisine",
-    "image": ".images/rest1.jpg",
+    "image": "/images/rest1.jpg",
     "description": "Tastes of Italy"
   },
 
@@ -36,20 +37,19 @@
     "id": 5,
     "name": "Bakuli",
     "category": "Soup-Bar",
-    "image": ".images/rest1.jpg",
+    "image": "/images/rest1.jpg",
     "description": "Just Like Mom's Soup"
   }
 
 ],
 
 
-"users":[
+    "users":[
 {
     "id":1,
     "name": "Njoro",
     "password": "123456"
 }
-
 
 ],
 
