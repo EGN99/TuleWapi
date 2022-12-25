@@ -7,34 +7,57 @@ body{
     padding-top: 65px;
     text-rendering: geometricPrecision;
     color: coral;
-    font-family: monospace;
+    font-family: 'Courier New', Courier, monospace;
     font-size:2cm;
     cursor: pointer;
 }
 
-.searchForm{
-    display: block;
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top:8.7cm;
+.dropdown-item{
+  cursor: pointer;
 }
 
 #searchArea{
-    min-height:20cm
+  min-height:20cm;
 }
-.searchForm input{
-    height:45px;
-    width:20cm;
-    border-radius: 25px;
+
+#search{
+  width: 50%;
+  padding:auto;
 }
-#searchBtn{
-   margin-left: 11.5cm;
-    border-radius: 30px;
-    padding-left: 20px;
-    padding-right: 20px;
+
+#search input {
+  margin-top:8.5cm;
+  border-radius: 5px;
+  padding: 15px;
+  cursor: pointer;
 
 }
+
+#search button{
+  margin-top: 8.5cm;
+  border-radius: 5px;
+}
+
+.autocom-box{
+  padding: 10px 20px;
+  min-height: 150px;
+  max-height: 280px;
+  background-color: white;
+  border-radius: 5px;
+  max-width: 89%;
+
+}
+
+.searchPic{
+  width:180px;
+  height: 110px;
+}
+
+.autocom-box li{
+  display: inline;
+  cursor: pointer;
+}
+
 
 .nav-item{
     padding:5px
@@ -42,7 +65,8 @@ body{
  
 #welcomeMsg{
   padding-right: 15px;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+  font-family: monospace;
+  cursor: pointer;
 }
 
 #loginPrompt{
@@ -108,11 +132,6 @@ input[type=text], input[type=password] {
     padding: 16px;
   }
   
-  span.psw {
-    float: right;
-    padding-top: 16px;
-  }
-  
 
   
   /* Modal Content/Box */
@@ -156,22 +175,22 @@ input[type=text], input[type=password] {
   
   /* Change styles for span and cancel button on extra small screens */
   @media screen and (max-width: 300px) {
-    span.psw {
-       display: block;
-       float: none;
-    }
     .cancelbtn {
        width: 100%;
     }
   }
 
-  .footer {
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    color: black;
-    text-align: center;
-    }  
+#signUpBtn{
+  margin-left:11.5cm;
+}
+
+.footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: black;
+  text-align: center;
+}  
   
 #review{
   cursor: pointer;
@@ -182,14 +201,21 @@ input[type=text], input[type=password] {
 }
 
 #insertHotel{
-  padding: 10px;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  margin-left: 100px;
 
 }
+
 
 .hotelPic{
   width :320px;
   height :200px;
+  margin-right: 45px;
+  margin-bottom: 45px;
+
 }
+
 
 #closer{
   background-color: coral;
@@ -204,9 +230,73 @@ input[type=text], input[type=password] {
 }
 #contactBtn{
   font-family: 'Courier New', Courier, monospace;
+  padding: 5px;
 }
 
 #about{
   font-family: 'Courier New', Courier, monospace;
   cursor: pointer;
+}
+
+.resultcards {
+  display: grid;
+  grid-template-rows: repeat(auto-fill,minmax(150px,1fr));
+  gap:.25rem;
+  margin-top: 1rem;
+}
+
+.card{
+  border: 1px solid black;
+  background-color: white;
+  padding: .5rem;
+}
+
+.card > header {
+  font-size: .8rem;
+}
+
+.hide {
+  display: none;
+}
+
+
+/*signup section*/
+#signUp{
+  width: 40%;
+  margin: auto;
+}
+
+/* Extra styles for the cancel button */
+#signUp .cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+#signUp .cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+#signUp .signupbtn {
+  padding: 14px;
+}
+
+/* Add padding to container elements */
+#signUp .container {
+  padding: 16px;
+}
+
+/* Clear floats */
+#signUp .clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  #signUp .cancelbtn, .signupbtn {
+    width: 100%;
+  }
 }

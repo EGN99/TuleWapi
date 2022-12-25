@@ -1,160 +1,96 @@
 {
-        
-        "users":[
+  "user": [
     {
-        "id":0,
-        "name": "Njoro",
-        "password": "123456"
+      "id": 0,
+      "name": "Njoro",
+      "password": "123456"
+    },
+    {
+      "id": 1,
+      "name": "Jane",
+      "password": "123456"
+    },
+    {
+      "name": "Tracy",
+      "password": "123456",
+      "id": 2
+    },
+    {
+      "name": "Ken",
+      "password": "4321",
+      "id": 3
     }
-
-],
-
-        "cuisine-categories":[
+  ],
+  "restaurant": [
     {
-        "id":0,
-        "Arabian-Food":[
-            {
-               
-                "id":0,
-                "name":"Al-Yusra"
-                    
-            }
-            ]},
-
+      "id": 1,
+      "name": "Jikoni",
+      "image": "/images/Emara.jpg",
+      "category": "BBQ",
+      "description": "The Best BBQ Steak In Town!"
+    },
     {
-        "id":1,
-        "Ethiopian-Food":[
-            {
-                   
-                "id":0,
-                "name":"Al-Yusra"
-                        
-            }
-            ]},
+      "id": 2,
+      "name": "Choma",
+      "image": "/images/Emara.jpg",
+      "category": "BBQ",
+      "description": "The Best BBQ Steak In Town!"
+    },
     {
-        "id":2,
-        "Indian-Food":[
-            {
-                       
-                "id":0,
-                "name":"Al-Yusra"
-                            
-            }
-            ]},
-            {
-        "id":3,
-        "Italian-Food":[
-            {
-                           
-                "id":0,
-                "name":"Al-Yusra"
-                                
-            }
-            ]},
+      "id": 3,
+      "name": "Kamakis",
+      "image": "/images/Emara.jpg",
+      "category": "BBQ",
+      "description": "The Best BBQ Steak In Town!"
+    },
     {
-        "id":4,
-        "Mexican-Food":[
-            {
-                               
-                "id":0,
-                "name":"Al-Yusra"
-                                    
-            }
-            ]
-        }
-    ],
-
-            "categories":[
-
-        {   "id":0,
-            "BBQ-Restaraunts" :[
-                {
-            "id":1,
-            "name": "Jikoni",
-            "image": "/images/Emara.jpg",
-            "description": "The Best BBQ Steak In Town!"
-          },
-          {
-            "id":2,
-            "name": "Choma",
-            "image": "/images/Emara.jpg",
-            "description": "The Best BBQ Steak In Town!"
-          },
-          {
-            "id":3,
-            "name": "Kamakis",
-            "image": "/images/Emara.jpg",
-            "description": "The Best BBQ Steak In Town!"
-          }
-          ]
-        },
-
-        {
-            "id":1,
-            "Cocktail-Bars" :[
-                {
-            "id":1,
-            "name": "The FrenchMan's Coffer",
-            "image": "/images/Emara.jpg",
-            "description": "Let Us Get You Drunk!!"
-          },
-          {
-            "id":2,
-            "name": "The Drunk Monkey",
-            "image": "/images/Emara.jpg",
-            "description": "Perfect for your after work drink."
-          },
-          {
-            "id":3,
-            "name": "Mwendas's",
-            "image": "/images/Emara.jpg",
-            "description": "Njoo tulewe"
-          }
-          ]
-        },
-
-
-        {   
-            "id":2,
-            "Chinese-Food" :[
-                {
-            "id":1,
-            "name": "Chen's",
-            "image": "/images/rest1.jpg",
-            "description": "So Good!"
-          },
-          {
-            "id":2,
-            "name": "China Ndogo",
-            "image": "/images/Emara.jpg",
-            "description": "The Best BBQ Steak In Town!"
-          }
-          ]
-        },
-
-
-        {
-            "id":3,
-            "Italian Cuisine" :[
-                {
-            "id":1,
-            "name": "Trattoria Pecorrino",
-            "image": "/images/Emara.jpg",
-            "description": "Tastes of Italy"
-          }
-          ]
-        },
-
-        {
-            "id":4,
-            "Soup-Bar" :[
-                {
-            "id":2,
-            "name": "Bakuli",
-            "image": "/images/Emara.jpg",
-            "description": "Just Like Mom's Soup"
-          }
-          ]
-        }
-    ]
+      "id": 4,
+      "name": "The FrenchMan's Coffer",
+      "image": "/images/Emara.jpg",
+      "category": "cocktails",
+      "description": "Let Us Get You Drunk!!"
+    },
+    {
+      "id": 5,
+      "name": "The Drunk Monkey",
+      "image": "/images/Emara.jpg",
+      "category": "cocktails",
+      "description": "Perfect for your after work drink."
+    },
+    {
+      "id": 6,
+      "name": "Mwendas",
+      "image": "/images/Emara.jpg",
+      "category": "cocktails",
+      "description": "Njoo tulewe"
+    },
+    {
+      "id": 7,
+      "name": "Chens",
+      "image": "/images/rest1.jpg",
+      "category": "chinese",
+      "description": "So Good!"
+    },
+    {
+      "id": 8,
+      "name": "China Ndogo",
+      "image": "/images/Emara.jpg",
+      "category": "chinese",
+      "description": "little China"
+    },
+    {
+      "id": 9,
+      "name": "Trattoria Pecorrino",
+      "image": "/images/Emara.jpg",
+      "category": "fastFood",
+      "description": "Tastes of Italy"
+    },
+    {
+      "id": 10,
+      "name": "Bakuli",
+      "image": "/images/Emara.jpg",
+      "category": "soup",
+      "description": "Just Like Mom's Soup"
+    }
+  ]
 }

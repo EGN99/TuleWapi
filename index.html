@@ -32,11 +32,11 @@
                       Cuisines
                     </a>
                     <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Arabian Food</a></li>
-                      <li><a class="dropdown-item" href="#">Ethiopian Food</a></li>
-                      <li><a class="dropdown-item" href="#">Indian Food</a></li>
-                      <li><a class="dropdown-item" href="#">Italian Food</a></li>
-                      <li><a class="dropdown-item" href="#">Mexican Food</a></li>  
+                      <li><a id="arbFood" class="dropdown-item" >Arabian Food</a></li>
+                      <li><a id="ethFood" class="dropdown-item" >Ethiopian Food</a></li>
+                      <li><a id="indFood" class="dropdown-item" >Indian Food</a></li>
+                      <li><a id="itnFood" class="dropdown-item" >Italian Food</a></li>
+                      <li><a id="mexFood" class="dropdown-item" >Mexican Food</a></li>  
                     </ul>
                   </li>
           
@@ -79,26 +79,80 @@
             </div>
         
             <div class="container" style="background-color:#f1f1f1">
-              <button type="button" onclick="document.getElementById('loginPrompt').style.display='none'" class="cancelbtn">Cancel</button>
-              <span class="psw">Forgot <a href="#">password?</a></span>
+              <button type="button" onclick="document.getElementById('signUp').style.display='none'" class="cancelbtn">Cancel</button>
+              <button onclick="document.getElementById('signUp').style.display='block'" id="signUpBtn"  class="btn btn-success">Sign Up</button>
             </div>
           </form>
-
         </div>
 
-
-        <div id="searchArea" style="background-image:url('/images/rest3.jpg');">
-            <form class="searchForm">
-            <input id="searchBar"  type="text" placeholder="Find Your Favorite Restaurants" >
-            <button id="searchBtn" class ="btn btn-warning">Let's Go!</button>
-            <ul class ='list-group modal'>
-              <li id="result">
-                <!-----get from server-->
-              </li>
-            </ul>
+        <div id="signUp" class="modal">
+          <span onclick="document.getElementById('signUp').style.display='none'" class="close" title="Close Modal">times;</span>
+          <form class="modal-content" action="" style="border:1px solid #ccc">
+            <div class="container">
+              <h1>Sign Up</h1>
+              <p>Please fill in this form to create an account.</p>
+              <hr>
+          
+              <label for="email"><b>User Name</b></label>
+              <input id="user" type="text" placeholder="Enter User Name" name="user" required>
+          
+              <label for="psw"><b>Password</b></label>
+              <input id="userpswd" type="password" placeholder="Enter Password" name="psw" required>
+          
+              <label for="psw-repeat"><b>Repeat Password</b></label>
+              <input id="RptUserpswd" type="password" placeholder="Repeat Password" name="psw-repeat" required>
+          
+              <label>
+                <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+              </label>
+          
+              <!-----<p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>----->
+          
+              <div class="clearfix">
+                <button  type="button" class="cancelbtn">Cancel</button>
+                <button id="signup" type="submit" class="signupbtn">Sign Up</button>
+              </div>
+            </div>
           </form>
         </div>
-            
+
+        <div id="searchArea" style="background-image:url('/images/rest3.jpg');">
+          <div id="search" class="container-fluid">
+            <form  class="d-flex" role="search">
+              <input id="searchBar" class="form-control me-2" type="search" placeholder="Find Your Favorite Restaurants" aria-label="Search">
+              <button id="searchBtn" class="btn btn-warning" type="submit">Let's Go!</button>
+            </form>
+            <div id="searchResults" class="autocom-box hide">
+              <li>
+                <img class="searchPic" style="float: left;">
+                <h5 class="searchHotel"></h5>
+                <p class="searchDescription"></p>
+                <p class="searchCategory"></p>
+              </li>
+            </div>
+          </div>
+        </div>
+       
+         <!--- <template>
+            <div id="result" class="resultcards">
+           <div class="card">
+                <div class="header"></div>
+                <div class="body"></div>
+              </div>
+            </div>
+          </template>
+            <div class="wrapper">
+            <div class="searchInput">
+              <input id="searchBar"  type="text" placeholder="Find Your Favorite Restaurants" >
+            <button id="searchBtn" class ="btn btn-warning">Let's Go!</button>
+              <div class="autocom-box">
+                <li>hotel a</li>
+                <li>hotel b</li>
+                <li>hotel c</li>
+              </div>
+              <div class="icon"><i class="fas fa-search"></i></div>
+            </div>
+          </div>----->
 
 
             <div class="card text-center">
@@ -111,24 +165,34 @@
                   <button id="BBQ" type="button" class="btn btn-outline-warning" class="restLinks" >BBQ Restaurants</button>
                   <button id="chinese" type="button" class="btn btn-outline-warning" class="restLinks" >Chinese Restaurants</button>
                   <button id="drinks" type="button" class="btn btn-outline-warning" class="restLinks" >Cocktail Bars</button>
-                  <button id="pizza" type="button" class="btn btn-outline-warning" class="restLinks"  >Pizza Places</button>
+                  <button id="fastFood" type="button" class="btn btn-outline-warning" class="restLinks"  >Pizza Places</button>
                   <button id="soup" type="button" class="btn btn-outline-warning" class="restLinks" >Soup Bars</button>
                  </div>
                 </div>
             </div>
 
   <span>
-    <div id="reviews" class="modal">
-    <!-----get from server-->
+    <div id="reviews" class="modal"></div>
+
+ <!----- <div class="card" style="width: 18rem;">
+  <img class="card-img-top" alt="...">
+  <div id="insertHotel" class="card-body">
+    <h5 class="hotelName card-title">Card title</h5>
+    <p class="hotelCategory card-text"></p>
+    <P class="hotelDescription"></P>
+    <a class="btn btn-warning">Visit Restaurant</a>
+  </div>
+</div>---->
+
+    <div id="insertHotel" >
+      <br>
+      <h1 class="hotelName"></h1>
+      <p class="hotelCategory"></p>
+      <P class="hotelDescription"></P>
     </div>
 
-    <div id="insertHotel" class="modal modal-content ">
-     <!-----get from server-->
-    </div>
+    <div id="closer" class="footer"></div>
 
-    <div id="closer" class="footer">
-     <!-----get from server-->
-    </div>
   </span>
           
 

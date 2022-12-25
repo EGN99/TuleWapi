@@ -1,20 +1,21 @@
+//login section configuration
+
 function fetchUsers(){
-    fetch (" http://localhost:3000/users") 
+    fetch (" http://localhost:3000/user") 
     .then((resp) =>resp.json())
     .then(getInfo);
     }
 
-function getInfo(users){
+function getInfo(user){
 
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
-    const signIn =document.getElementById('signInBtn');
+    const signIn = document.getElementById('signInBtn');
     const loginForm = document.getElementById('loginPrompt');
     const welcome = document.getElementById('welcomeMsg');
    
-
-    for (i=0; i<users.length; i++) {
-        if(username==users[i].name && password == users[i].password){
+    for (i=0; i<user.length; i++) {
+        if(username==user[i].name && password == user[i].password){
             welcome.innerHTML= ('Welcome '+ username )
             signIn.remove();
             loginForm.remove();
@@ -31,89 +32,186 @@ login.addEventListener('click',(event)=>{
 })
 
 
-function fetchRestaurants(){
-    fetch (" http://localhost:3000/restaurants") 
-    .then((resp) =>resp.json())
-    .then(searchRestaurants)
+//sign up as a user section
+const signUp=document.getElementById('signup')
+signUp.addEventListener('click',(event)=>{
+    event.preventDefault()
+    registerUser()
+})
+
+
+
+function registerUser(){
+    const userName = document.getElementById('user').value
+    const userpswd = document.getElementById('userpswd').value
+    const RptUserpswd = document.getElementById('RptUserpswd').value
+
+    if (userpswd==RptUserpswd){
+        
+        const configurationObject = {
+            method: "POST",
+            headers:{
+                "content-Type":"application/json",
+            },
+            body:JSON.stringify(
+                {
+                    name:userName,
+                    password:userpswd
+                }
+            )
+
+        }
+        fetch("http://localhost:3000/user",configurationObject)
+        .then(resp=>resp.json())
+        .then(data=>console.log(data))
+        .catch (error=>console.log(error))
+        };
     }
 
 
-function searchRestaurants(restaurants){
+
+//configure search section
+function fetchRestaurants(){
+    fetch (" http://localhost:3000/restaurant") 
+    .then((resp) =>resp.json())
+    .then(json=>{
+        json.map(data=>{
+
+        searchRestaurant(data)
+    });
+    })
+}
+
+
+
+ function searchRestaurant(data){
     const searchItem = document.getElementById('searchBar').value;
-    const searchResults= document.getElementById('result');
+    const searchResults= document.getElementById('searchResults')
 
-    for (i=0; i<restaurants.length; i++) {
-        if(searchItem==restaurants[i].name){
-
-            const hotelName = document.createElement("h2");
-            hotelName.innerText= (restaurants.name);
-            const hotelDetails = document.createElement("p");
-            hotelDetails.innerText = (restaurants.description);
-            
-            searchResults.appendChild(hotelName);
-            searchResults.appendChild(hotelDetails);
-
-            return;
+     //for (i=0; i<data.length; i++){
+        if(searchItem.toLocaleLowerCase()===data.name.toLocaleLowerCase()){
+            const hotelName = searchResults.querySelector('.searchHotel');
+            hotelName.innerText= (data.name);
+            const hotelDetails = searchResults.querySelector('.searchDescription');
+            hotelDetails.innerText = (data.description);
+            const hotelCategory = searchResults.querySelector('.searchCategory');
+            hotelCategory.innerText = (data.category);
+            const hotelImage=searchResults.querySelector('.searchPic')
+            hotelImage.src =(data.image);
+            searchResults.classList.remove('hide')
         }
-    } alert("Not Found") 
-    };
-
+ }
 
 const searchBtn = document.getElementById('searchBtn')
 searchBtn.addEventListener('click',(event)=>{
     event.preventDefault();
-    searchRestaurants();
-})    
+    fetchRestaurants();
+});    
 
 
-
+//configuring category buttons
 function fetchBBQ(){
-    fetch (" http://localhost:3000/restaurants/1") 
+    fetch (" http://localhost:3000/restaurant?category=BBQ") 
     .then((resp) =>resp.json())
-    .then(getHotel)
-    }
-
-
-function getHotel(restaurants){
-    const hotelSct = document.getElementById('insertHotel');
-    let hotelPic = document.createElement('img');
-    let hotelDescription = document.createElement('p');
-    let hotelCategory = document.createElement('p');
-    let hotelName = document.createElement('h1');
-
-    hotelName.setAttribute("class","hotelName");
-    hotelPic.setAttribute("class","hotelPic");
-    hotelDescription.setAttribute("class","hotelDescription");
-    hotelCategory.setAttribute("class","hotelCategory");
-
-
-    hotelPic.src = restaurants.image
-    hotelName.innerText = restaurants.name;
-    hotelCategory.innerText = restaurants.category;
-    hotelDescription.innerText = restaurants.description;
+    .then(json=>{
+        json.map(data=>{
+        console.log(data)
+        getHotel(data)
+    });
+    })
+}   
     
-    hotelSct.appendChild(hotelPic);
-    hotelSct.appendChild(hotelName);
-    hotelSct.appendChild(hotelDescription);
-    hotelSct.appendChild(hotelCategory);
+
+function fetchDrinks(){
+    fetch (" http://localhost:3000/restaurant?category=cocktails") 
+     .then((resp) =>resp.json())
+    .then(json=>{
+        json.map(data=>{
+            console.log(data)
+            getHotel(data)
+        });
+        })
 };
 
+function fetchChinese(){
+    fetch (" http://localhost:3000/restaurant?category=chinese") 
+     .then((resp) =>resp.json())
+    .then(json=>{
+        json.map(data=>{
+            console.log(data)
+            getHotel(data)
+        });
+        })
+}
+function fetchfastFood(){
+    fetch (" http://localhost:3000/restaurant?category=fastFood") 
+     .then((resp) =>resp.json())
+    .then(json=>{
+        json.map(data=>{
+            console.log(data)
+            getHotel(data)
+        });
+        })
+}
+function fetchSoup(){
+    fetch (" http://localhost:3000/restaurant?category=soup") 
+     .then((resp) =>resp.json())
+    .then(json=>{
+        json.map(data=>{
+            console.log(data)
+            getHotel(data)
+        });
+        })
+}
+
+
+function getHotel(data){
+    const hotelSct = document.getElementById('insertHotel');
+    let hotelPic = document.createElement('img');
+    hotelPic.setAttribute('class','hotelPic')
+    let hotelDescription = document.getElementsByClassName('hotelDescription');
+    let hotelCategory = document.getElementsByClassName('hotelCategory');
+    let hotelName = document.getElementsByClassName('hotelName');
+
     
+
+     hotelPic.src = data.image
+     hotelName.innerText = data.name;
+     hotelCategory.innerText = data.category;
+     hotelDescription.innerText = data.description;
+
+     hotelSct.appendChild(hotelPic)
+
+};
+
 const bbqBtn = document.getElementById('BBQ');
 bbqBtn.addEventListener('click',()=>{
-    fetchBBQ();
+    fetchBBQ()
 });
 
-// function fetchDrinks(){
-//     fetch (" http://localhost:3000/restaurants/2") 
-//     .then((resp) =>resp.json())
-//     .then(getHotel)
-//     }
-// const drinksBtn = document.getElementById('drinks');
-//     bbqBtn.addEventListener('click',()=>{
-//         fetchDrinks();
-//     });
+const chineseBtn = document.getElementById('chinese');
+chineseBtn.addEventListener('click',()=>{
+    fetchChinese()
+});
 
+
+const pizzaBtn = document.getElementById('fastFood');
+pizzaBtn.addEventListener('click',()=>{
+    fetchfastFood()
+});
+
+const soupBtn = document.getElementById('soup');
+soupBtn.addEventListener('click',()=>{
+    fetchSoup()
+});
+const drinksBtn = document.getElementById('drinks');
+    drinksBtn.addEventListener('click',()=>{
+    fetchDrinks()
+});
+
+
+
+//configure footer section
 document.addEventListener('DOMContentLoaded',()=>{
 
     const footerInfo = document.getElementById('closer')
@@ -138,3 +236,49 @@ document.addEventListener('DOMContentLoaded',()=>{
 })
 
 
+//cuisines
+const Arabian = document.getElementById('arbFood')
+Arabian.addEventListener('click',()=>{
+    fetchArabian()
+    alert("ok")
+}
+);
+
+const Ethiopian = document.getElementById('ethFood')
+Ethiopian.addEventListener('click',()=>{
+    alert("ok")
+}
+);
+
+const Indian = document.getElementById('indFood')
+Indian.addEventListener('click',()=>{
+    alert("ok")
+}
+);
+
+const Italian = document.getElementById('itnFood')
+Italian.addEventListener('click',()=>{
+    alert("ok")
+}
+);
+
+const Mexican = document.getElementById('mexFood')
+Mexican.addEventListener('click',()=>{
+    alert("ok")
+}
+);
+
+function fetchArabian(){
+    fetch (" http://localhost:3000/restaurant?cuisine=Arabian") 
+     .then((resp) =>resp.json())
+    .then(json=>{
+        json.map(data=>{
+            console.log(data)
+            showCuisine(data)
+        });
+        })
+}
+
+function showCuisine(data){
+
+}
