@@ -3,22 +3,14 @@
     {
       "id": 0,
       "name": "Njoro",
+      "email": "njoro@tulewapi.com",
       "password": "123456"
     },
     {
-      "id": 1,
-      "name": "Jane",
-      "password": "123456"
-    },
-    {
-      "name": "Tracy",
+      "name": "Wambo",
+      "email": "Wambo@tulewapi.com",
       "password": "123456",
-      "id": 2
-    },
-    {
-      "name": "Ken",
-      "password": "4321",
-      "id": 3
+      "id": 1
     }
   ],
   "restaurant": [
@@ -45,7 +37,7 @@
     },
     {
       "id": 4,
-      "name": "The FrenchMan's Coffer",
+      "name": "The FrenchMans Coffer",
       "image": "/images/Emara.jpg",
       "category": "cocktails",
       "description": "Let Us Get You Drunk!!"
@@ -80,10 +72,10 @@
     },
     {
       "id": 9,
-      "name": "Trattoria Pecorrino",
+      "name": "Sandies",
       "image": "/images/Emara.jpg",
       "category": "fastFood",
-      "description": "Tastes of Italy"
+      "description": "your fast-food joint of choice"
     },
     {
       "id": 10,
@@ -91,6 +83,41 @@
       "image": "/images/Emara.jpg",
       "category": "soup",
       "description": "Just Like Mom's Soup"
+    },
+    {
+      "id": 11,
+      "name": "Alyusra",
+      "image": "/images/Emara.jpg",
+      "category": "Arabian",
+      "description": "The best Arabian Cuisine"
+    },
+    {
+      "id": 12,
+      "name": "Addissa",
+      "image": "/images/Emara.jpg",
+      "category": "Ethiopian",
+      "description": "The best Ethiopian Cuisine"
+    },
+    {
+      "id": 13,
+      "name": "Rajas",
+      "image": "/images/Emara.jpg",
+      "category": "Indian",
+      "description": "The best Indian Cuisine"
+    },
+    {
+      "id": 14,
+      "name": "Trattoria",
+      "image": "/images/Emara.jpg",
+      "category": "Italian",
+      "description": "Tastes of Italy"
+    },
+    {
+      "id": 15,
+      "name": "Tacos",
+      "image": "/images/Emara.jpg",
+      "category": "Mexican",
+      "description": "The best Mexican Cuisine"
     }
   ]
 }

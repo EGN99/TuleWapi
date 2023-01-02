@@ -264,6 +264,7 @@ input[type=text], input[type=password] {
 #signUp{
   width: 40%;
   margin: auto;
+  margin-top: 176px;
 }
 
 /* Extra styles for the cancel button */
@@ -299,4 +300,98 @@ input[type=text], input[type=password] {
   #signUp .cancelbtn, .signupbtn {
     width: 100%;
   }
+}
+
+
+
+#id01 * {box-sizing: border-box}
+
+/* Set a style for all buttons */
+#id01 button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+#id01 button:hover {
+  opacity:1;
+}
+
+/* Float cancel and delete buttons and add an equal width */
+#id01 .cancelbtn, #id01 .deletebtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add a color to the cancel button */
+#id01 .cancelbtn {
+  background-color: #ccc;
+  color: black;
+}
+
+/* Add a color to the delete button */
+#id01 .deletebtn {
+  background-color: #f44336;
+}
+
+/* Add padding and center-align text to the container */
+#id01 .container {
+  padding: 16px;
+  text-align: center;
+}
+
+/* The Modal (background) */
+#id01 .modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: #474e5d;
+  padding-top: 50px;
+}
+
+/* Modal Content/Box */
+#id01 .modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* Style the horizontal ruler */
+#id01 hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* The Modal Close Button (x) */
+#id01 .close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+#id01 .close:hover,
+#id01 .close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+/* Clear floats */
+#id01 .clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
 }

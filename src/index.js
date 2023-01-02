@@ -19,6 +19,8 @@ function getInfo(user){
             welcome.innerHTML= ('Welcome '+ username )
             signIn.remove();
             loginForm.remove();
+            const deleteBtn=document.getElementById('deleteBtn')
+            deleteBtn.classList.remove('hide')
             return;
         }
     }
@@ -33,15 +35,24 @@ login.addEventListener('click',(event)=>{
 
 
 //sign up as a user section
+const signUpBtn=document.getElementById('signUpBtn')
+signUpBtn.addEventListener('click',(e)=>{
+    e.preventDefault()
+})
+
 const signUp=document.getElementById('signup')
 signUp.addEventListener('click',(event)=>{
     event.preventDefault()
     registerUser()
+    const signUpModal=document.getElementById('signUp')
+    signUpModal.remove()
+    alert('Sign-Up successful. Please Sign In to continue')
 })
 
 
 
 function registerUser(){
+    const userEmail = document.getElementById('useremail').value
     const userName = document.getElementById('user').value
     const userpswd = document.getElementById('userpswd').value
     const RptUserpswd = document.getElementById('RptUserpswd').value
@@ -56,6 +67,7 @@ function registerUser(){
             body:JSON.stringify(
                 {
                     name:userName,
+                    email:userEmail,
                     password:userpswd
                 }
             )
@@ -115,7 +127,6 @@ function fetchBBQ(){
     .then((resp) =>resp.json())
     .then(json=>{
         json.map(data=>{
-        console.log(data)
         getHotel(data)
     });
     })
@@ -127,7 +138,6 @@ function fetchDrinks(){
      .then((resp) =>resp.json())
     .then(json=>{
         json.map(data=>{
-            console.log(data)
             getHotel(data)
         });
         })
@@ -138,7 +148,6 @@ function fetchChinese(){
      .then((resp) =>resp.json())
     .then(json=>{
         json.map(data=>{
-            console.log(data)
             getHotel(data)
         });
         })
@@ -148,7 +157,6 @@ function fetchfastFood(){
      .then((resp) =>resp.json())
     .then(json=>{
         json.map(data=>{
-            console.log(data)
             getHotel(data)
         });
         })
@@ -158,7 +166,6 @@ function fetchSoup(){
      .then((resp) =>resp.json())
     .then(json=>{
         json.map(data=>{
-            console.log(data)
             getHotel(data)
         });
         })
@@ -176,9 +183,9 @@ function getHotel(data){
     
 
      hotelPic.src = data.image
-     hotelName.innerText = data.name;
-     hotelCategory.innerText = data.category;
-     hotelDescription.innerText = data.description;
+     hotelName.innerText = (data.name);
+     hotelCategory.innerText = (data.category);
+     hotelDescription.innerText = (data.description);
 
      hotelSct.appendChild(hotelPic)
 
